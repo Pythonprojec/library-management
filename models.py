@@ -27,8 +27,8 @@ class bookMaster(db.Model):
     authorName = db.Column(db.String, nullable=False)
     PublisherName = db.Column(db.String, nullable=False)
     pages = db.Column(db.Integer, nullable=False)
-    price = db.Column(db.Integer, nullable=False)
-    status = db.Column(db.String, nullable=False)
+    price = db.Column(db.Integer)
+    status = db.Column(db.String)
     subject = db.relationship("Subjects", backref="subject", lazy=True)
 
 
